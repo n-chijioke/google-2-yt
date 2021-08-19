@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Avatar from '../components/Avatar';
+import { MicrophoneIcon, ViewGridIcon } from '@heroicons/react/solid';
 
 export default function Home() {
   return (
@@ -9,21 +11,22 @@ export default function Home() {
       </Head>
 
       {/**Header */}
-      <header>
+      <header className="flex w-full p-5 justify-between text-lg text-gray-700">
         {/** Left */}
-        <div>
-          <p>About</p>
-          <p>Store</p>
+        <div className="flex space-x-4 items-center">
+          <p className="link">About</p>
+          <p className="link">Store</p>
         </div>
 
         {/** Right */}
-        <div>
-          <p>Gmail</p>
-          <p>Images</p>
+        <div className="flex space-x-4 items-center">
+          <p className="link">Gmail</p>
+          <p className="link">Images</p>
 
           {/**Icon */}
+          <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer"/>
 
-          {/**Avatar */}
+          <Avatar url="https://coaching.papareact.com/ai9"/>
         </div>
       </header>
 
