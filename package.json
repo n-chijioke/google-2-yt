@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "css:dev": "TAILWIND_MODE=watch postcss ./styles/tailwind.css -o ./styles/globals.css --watch",
+    "css:build": "postcss ./styles/tailwind.css -o ./styles/globals.css"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.4",
